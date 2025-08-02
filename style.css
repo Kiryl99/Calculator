@@ -1,0 +1,96 @@
+/* Reset and base styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.number {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.operator {
+  background-color: #ff9500;
+  color: #fff;
+}
+
+.btn.function {
+  background-color: #555;
+  color: #fff;
+}
+
+.btn.equal {
+  background-color: #28a745;
+  color: #fff;
+  grid-row: span 2;
+}
+
+.btn.zero {
+  grid-column: span 2;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Hover states */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive text */
+@media (max-width: 480px) {
+  .display {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+}
